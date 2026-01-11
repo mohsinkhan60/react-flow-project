@@ -12,6 +12,7 @@ import {
   type OnNodesChange,
   type OnEdgesChange,
   type OnConnect,
+  type NodeTypes,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useCallback, useState } from "react";
@@ -20,7 +21,7 @@ import { InputNode } from "./components/nodes/InputNode";
 import { TextNode } from "./components/nodes/TextNode";
 import { CustomEdge } from "./components/edges/CustomEdge";
 
-const nodeTypes = {
+const nodeTypes: NodeTypes = {
   input: InputNode,
   text: TextNode,
 };

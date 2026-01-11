@@ -1,7 +1,7 @@
 import { Handle, Position, useReactFlow } from "@xyflow/react";
 import { useState } from "react";
 
-export function InputNode(props) {
+export function InputNode() {
   const [inputValue, setInputValue] = useState("");
   const { setNodes } = useReactFlow();
 
