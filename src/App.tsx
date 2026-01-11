@@ -20,6 +20,7 @@ import { initialEdges, initialNodes } from "./constant";
 import { InputNode } from "./components/nodes/InputNode";
 import { TextNode } from "./components/nodes/TextNode";
 import { CustomEdge } from "./components/edges/CustomEdge";
+import Sidebar from "./components/Sidebar";
 
 const nodeTypes: NodeTypes = {
   input: InputNode,
@@ -44,13 +45,17 @@ export default function App() {
     []
   );
   const onConnect: OnConnect = useCallback(
-    (params) => setEdges((edgesSnapshot) => addEdge({ ...params, animated : true }, edgesSnapshot)),
+    (params) =>
+      setEdges((edgesSnapshot) =>
+        addEdge({ ...params, animated: true }, edgesSnapshot)
+      ),
     []
     //  type: "customEdge"
   );
 
   return (
     <div className="bg-[#F0F0F0]" style={{ width: "100vw", height: "100vh" }}>
+      <Sidebar />
       <ReactFlow
         nodes={nodes}
         edges={edges}
