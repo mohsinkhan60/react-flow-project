@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { FaTiktok, FaYoutube } from "react-icons/fa";
 import { FiFileText, FiUpload } from "react-icons/fi";
 import { GoFileDirectory } from "react-icons/go";
 import { RiGlobalLine, RiInstagramFill } from "react-icons/ri";
+import YouTubeModal from "./common/YouTubeModal";
 
 export const Sidebar = () => {
+  const [isYTOpen, setIsYTOpen] = useState(false);
   return (
     <aside className="fixed left-2 top-44 z-40">
       <div className="bg-white rounded-xl shadow-md p-4 flex flex-col gap-2 items-center w-18">
@@ -37,6 +40,7 @@ export const Sidebar = () => {
 
         <button
           aria-label="Add YouTube Content"
+          onClick={() => setIsYTOpen(true)}
           className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
         >
           <FaYoutube size={25} />
@@ -122,6 +126,9 @@ export const Sidebar = () => {
           </span>
         </button>
       </div>
+      {isYTOpen && (
+        <YouTubeModal isOpen={isYTOpen} onClose={() => setIsYTOpen(false)} />
+      )}
     </aside>
   );
 };
