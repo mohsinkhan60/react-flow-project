@@ -1,168 +1,125 @@
-
+import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { FiFileText, FiUpload } from "react-icons/fi";
+import { GoFileDirectory } from "react-icons/go";
+import { RiGlobalLine, RiInstagramFill } from "react-icons/ri";
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed left-2 top-54 z-40">
-      <div className="bg-white rounded-xl shadow-md p-2 flex flex-col gap-3 items-center w-14">
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
+    <aside className="fixed left-2 top-44 z-40">
+      <div className="bg-white rounded-xl shadow-md p-4 flex flex-col gap-2 items-center w-18">
+        <button
+          aria-label="AI Assistant"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-linear-to-br from-indigo-500 via-violet-500 to-cyan-400 text-white hover:opacity-90"
+        >
           <svg
-            width="20"
-            height="20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-bot-message-square text-white size-6"
           >
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="4"
-              stroke="#111827"
-              strokeWidth="1.2"
-            />
-            <circle cx="12" cy="12" r="3" fill="#111827" />
+            <path d="M12 6V2H8"></path>
+            <path d="m8 18-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2Z"></path>
+            <path d="M2 12h2"></path>
+            <path d="M9 11v2"></path>
+            <path d="M15 11v2"></path>
+            <path d="M20 12h2"></path>
           </svg>
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">AI Assistant</span>
+          </span>
         </button>
 
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M21 6.5v11c0 1-1 1.5-1.9.9l-5.6-3.4a2 2 0 00-2.1 0l-5.6 3.4A1.2 1.2 0 013 17.5v-11C3 5.5 4 5 4.9 5.6l5.6 3.4a2 2 0 002.1 0l5.6-3.4c.9-.5 1.9 0 1.9.9z"
-              stroke="#111827"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+        <button
+          aria-label="Add YouTube Content"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <FaYoutube size={25} />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">Add YouTube Content</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              Y
+            </kbd>
+          </span>
         </button>
 
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 2v20M2 12h20"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+        <button
+          aria-label="Add TikTok Content"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white textblack0 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <FaTiktok size={25} />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">Add TikTok Content</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              T
+            </kbd>
+          </span>
+        </button>
+        <button
+          aria-label="Add TikTok Content"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white textblack0 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <RiInstagramFill size={25} />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">Add Instagram Content</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              I
+            </kbd>
+          </span>
+        </button>
+        <button
+          aria-label="Add TikTok Content"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white textblack0 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <RiGlobalLine size={25} />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">Add Website Link</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              G
+            </kbd>
+          </span>
+        </button>
+        <button
+          aria-label="Add Website Link"
+          className="group relative w-11 h-11 rounded-full flex items-center justify-center bg-white text-gray-700 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <FiFileText size={25} className="text-current" />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">Add Text Content</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              F
+            </kbd>
+          </span>
+        </button>
+        <button
+          aria-label="Add Website Link"
+          className="group relative w-11 h-11 rounded-full flex items-center justify-center bg-white text-gray-700 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <FiUpload size={25} className="text-current" />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
+            <span className="text-sm">Upload File</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              U
+            </kbd>
+          </span>
         </button>
 
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="8" r="3" stroke="#111827" strokeWidth="1.2" />
-            <path
-              d="M6 19c1-3 5-4 6-4s5 1 6 4"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3 12h18M12 3v18"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="3"
-              y="4"
-              width="18"
-              height="14"
-              rx="2"
-              stroke="#111827"
-              strokeWidth="1.2"
-            />
-            <path
-              d="M7 8h10"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </button>
-
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 12h16M8 8l-4 4 4 4"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
-        <button className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-100">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3 7h18v10H3z"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M8 12h8"
-              stroke="#111827"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </svg>
+        <button
+          aria-label="Files"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white text-gray-700 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+        >
+          <GoFileDirectory size={25} />
+          <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow">
+            <span className="text-sm">Files</span>
+            <kbd className="ml-4 text-xs bg-gray-100 px-2 py-0.5 rounded">
+              D
+            </kbd>
+          </span>
         </button>
       </div>
     </aside>
