@@ -89,7 +89,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onAddContent }) => {
         </button>
         <button
           aria-label="Add TikTok Content"
-          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white textblack0 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
         >
           <RiGlobalLine size={25} />
           <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
@@ -101,7 +101,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onAddContent }) => {
         </button>
         <button
           aria-label="Add Website Link"
-          className="group relative w-11 h-11 rounded-full flex items-center justify-center bg-white text-gray-700 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+          className="group relative w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
         >
           <FiFileText size={25} className="text-current" />
           <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
@@ -113,7 +113,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onAddContent }) => {
         </button>
         <button
           aria-label="Add Website Link"
-          className="group relative w-11 h-11 rounded-full flex items-center justify-center bg-white text-gray-700 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+          className="group relative w-11 h-11 rounded-full flex items-center justify-center bg-white text-black hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
         >
           <FiUpload size={25} className="text-current" />
           <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow whitespace-nowrap">
@@ -126,7 +126,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onAddContent }) => {
 
         <button
           aria-label="Files"
-          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white text-gray-700 hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
+          className="group relative w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:bg-[#437CFF] hover:text-white transition-colors duration-200"
         >
           <GoFileDirectory size={25} />
           <span className="absolute left-full ml-4 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 bg-white text-black px-3 py-1.5 rounded-full shadow">
