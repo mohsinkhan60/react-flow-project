@@ -45,10 +45,9 @@ export default function App() {
   const onConnect: OnConnect = useCallback(
     (params) =>
       setEdges((edgesSnapshot) =>
-        addEdge({ ...params, animated: true }, edgesSnapshot)
+        addEdge({ ...params, animated: true, type: "customEdge" }, edgesSnapshot)
       ),
     []
-    //  type: "customEdge"
   );
 
   const handleAddContent = useCallback(
@@ -91,7 +90,7 @@ export default function App() {
         fitView
       >
         <Sidebar onAddContent={handleAddContent} />
-        <Background variant={BackgroundVariant.Dots} gap={5} size={0.5} />
+        <Background variant={BackgroundVariant.Dots} gap={9} size={0.5} />
         <Controls />
         <MiniMap zoomable pannable />
       </ReactFlow>
