@@ -5,7 +5,18 @@ import { GoFileDirectory } from "react-icons/go";
 import { RiGlobalLine, RiInstagramFill } from "react-icons/ri";
 import YouTubeModal from "./common/YouTubeModal";
 
-export const Sidebar = () => {
+type AddContentPayload = {
+  url: string;
+  title: string;
+  author?: string;
+  thumbnail: string;
+};
+
+interface SidebarProps {
+  onAddContent?: (payload: AddContentPayload) => void;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ onAddContent }) => {
   const [isYTOpen, setIsYTOpen] = useState(false);
   return (
     <aside className="fixed left-2 top-44 z-40">
@@ -127,7 +138,11 @@ export const Sidebar = () => {
         </button>
       </div>
       {isYTOpen && (
-        <YouTubeModal isOpen={isYTOpen} onClose={() => setIsYTOpen(false)} />
+        <YouTubeModal
+          isOpen={isYTOpen}
+          onClose={() => setIsYTOpen(false)}
+          onAdd={(payload) => onAddContent?.(payload)}
+        />
       )}
     </aside>
   );
