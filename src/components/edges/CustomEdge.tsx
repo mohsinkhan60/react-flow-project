@@ -1,7 +1,7 @@
 import {
   BaseEdge,
   EdgeLabelRenderer,
-  getStraightPath,
+  getBezierPath,
   useReactFlow,
   type EdgeProps,
 } from "@xyflow/react";
@@ -15,7 +15,7 @@ export function CustomEdge({
   targetY,
 }: EdgeProps) {
   const { setEdges } = useReactFlow();
-  const [edgePath, labelX, labelY] = getStraightPath({
+  const [edgePath, labelX, labelY] = getBezierPath({
     sourceX,
     sourceY,
     targetX,
@@ -28,7 +28,15 @@ export function CustomEdge({
 
   return (
     <>
-      <BaseEdge id={id} path={edgePath} />
+      <BaseEdge
+        id={id}
+        path={edgePath}
+        style={{
+          strokeDasharray: "2 2",
+          strokeLinecap: "round",
+          strokeWidth: 1,
+        }}
+      />
       <EdgeLabelRenderer>
         <div
           style={{
