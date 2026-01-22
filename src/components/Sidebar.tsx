@@ -19,7 +19,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ onAddContent }) => {
   const [isYTOpen, setIsYTOpen] = useState(false);
   return (
-    <aside className="fixed left-2 top-44 z-40">
+    <aside className="fixed left-2 top-38 z-40">
       <div className="bg-white rounded-xl shadow-md p-4 flex flex-col gap-2 items-center w-18">
         <button
           aria-label="AI Assistant"
